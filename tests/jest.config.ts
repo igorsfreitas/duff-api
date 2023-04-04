@@ -20,7 +20,9 @@ const config: Config.InitialOptions = {
     '<rootDir>/tests/jest.config.ts',
   ],
   coverageDirectory: './coverage',
-  collectCoverageFrom: ['**/*.{!(*@(dto|guard|entity|module|strategy)),}.ts'],
+  collectCoverageFrom: [
+    '**/*.{!(*@(dto|guard|entity|module|strategy|decorator)),}.ts',
+  ],
 };
 
 export default config;
