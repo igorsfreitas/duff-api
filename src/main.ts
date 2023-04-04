@@ -10,6 +10,7 @@ async function bootstrap() {
   app.setGlobalPrefix('api');
 
   const config = new DocumentBuilder()
+    .addBearerAuth()
     .setTitle('Duff API')
     .setDescription('The duff API description')
     .setVersion('1.0')
