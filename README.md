@@ -83,3 +83,9 @@ Nest is [MIT licensed](LICENSE).
 - style - Utilizado quando feita uma alteração no estilo e formatação do código (não é CSS)
 - ci - Utilizado quando feita uma alteração no build do CI
 - perf - Utilizado quando feita alguma alteração para melhorar na performance do sistema ou do build
+
+## To create a new migration using the cli
+
+```
+$ yarn typeorm:create src/config/database/migrations/CreateXptoTable
+```
