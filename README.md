@@ -71,3 +71,15 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+## Conventional commits typings
+
+- chore - Utilizado na atualização para mudanças em ferramentas, configurações e bibliotecas. Atualizações que não ocasionam em alteração no código de produção.
+- docs - Utilizado quando é adicionado ou atualizado alguma documentação no projeto.
+- test - Utilizado quando feita qualquer alteração em relação aos testes do projeto.
+- feat - Utilizado quando uma nova feature está sendo adicionada ao projeto
+- fix - Utilizado quando um fix está sendo lançado
+- refactor - Utilizado quando o commit for de refatoração
+- style - Utilizado quando feita uma alteração no estilo e formatação do código (não é CSS)
+- ci - Utilizado quando feita uma alteração no build do CI
+- perf - Utilizado quando feita alguma alteração para melhorar na performance do sistema ou do build
