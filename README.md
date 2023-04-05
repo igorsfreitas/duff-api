@@ -89,3 +89,17 @@ Nest is [MIT licensed](LICENSE).
 ```
 $ yarn typeorm:create src/config/database/migrations/CreateXptoTable
 ```
+
+### Rodando Localmente com Docker
+
+A step by step series of examples that tell you how to get a development env running.
+
+ON PROJECT FOLDER
+
+```
+docker build . -t duff-api
+```
+
+```
+docker run -p 8080:8080 --name duff-api duff-api
+```
