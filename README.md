@@ -90,7 +90,7 @@ Nest is [MIT licensed](LICENSE).
 $ yarn typeorm:create src/config/database/migrations/CreateXptoTable
 ```
 
-### Rodando Localmente com Docker
+## Rodando Localmente com Docker
 
 A step by step series of examples that tell you how to get a development env running.
 
@@ -102,4 +102,16 @@ docker build . -t duff-api
 
 ```
 docker run -p 8080:8080 --name duff-api duff-api
+```
+
+## To access the swagger local documentation, run the project, then:
+
+```
+$ http://localhost:5000/docs
+```
+
+## To Test the request with postman, you can use the collection inside the root folder:
+
+```
+$ DUFF Api.postman_collection.json
 ```

@@ -1,0 +1,945 @@
+{
+	"info": {
+		"_postman_id": "b3b764b2-1f11-4618-9564-8ce8d5267e82",
+		"name": "DUFF Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1425161"
+	},
+	"item": [
+		{
+			"name": "GET BEST BEER TYPE AND PLAYLIST BY TEMPERATURE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}/api/beer-types/best-by-temperature?temperature=3",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"beer-types",
+						"best-by-temperature"
+					],
+					"query": [
+						{
+							"key": "temperature",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SUCCESS",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}/api/beer-types/best-by-temperature?temperature=3",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"beer-types",
+								"best-by-temperature"
+							],
+							"query": [
+								{
+									"key": "temperature",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "5567"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"15bf-21C2zzUXdlP/xpvqnLliwz6R+Xs\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 Apr 2023 21:15:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"beerStyle\": \"Weissbier\",\n    \"playlist\": {\n        \"name\": \"This Is Eisbrecher\",\n        \"tracks\": [\n            {\n                \"name\": \"Verrückt\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/7AbeYC9dss7l0YtQz9fWy0\"\n            },\n            {\n                \"name\": \"Was ist hier los?\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/42COu0u76ahdsby0hKfMPH\"\n            },\n            {\n                \"name\": \"Zwischen uns\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/7BOQf672CArOXYDR962JEx\"\n            },\n            {\n                \"name\": \"Out of the Dark\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/2voarIoKZOcdvx5X7uvjuo\"\n            },\n            {\n                \"name\": \"FAKK\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/2zd2TPYOTYtGiGwXbHNs9N\"\n            },\n            {\n                \"name\": \"Sturmfahrt\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/7paewQ5u6pXt09tRJdpwZr\"\n            },\n            {\n                \"name\": \"This is Deutsch\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/6K7aVJFwIcszcR9IwslSvC\"\n            },\n            {\n                \"name\": \"Miststück 2012\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/6LInXi3g2kWLOE3Hvr0c7Z\"\n            },\n            {\n                \"name\": \"Menschenfresser\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/0Ak9IYUsE92XQtzuk4ixRB\"\n            },\n            {\n                \"name\": \"Volle Kraft voraus\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/3fMIlezKz8qM7nfnoRjU41\"\n            },\n            {\n                \"name\": \"Eiszeit\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/2qfcicuKvfJfGafipfx2oG\"\n            },\n            {\n                \"name\": \"Die Sehnsucht ist mein Steuermann - MTV Unplugged\",\n                \"artist\": \"Santiano\",\n                \"url\": \"https://open.spotify.com/track/4jDs7Tl8ntwOxsAWksz95d\"\n            },\n            {\n                \"name\": \"Das Gesetz\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/2Cs74FK0M0qMBHKQBExUv3\"\n            },\n            {\n                \"name\": \"Rot wie die Liebe\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/0Jo41H9HUdg6De2EpkP7w8\"\n            },\n            {\n                \"name\": \"Im Guten Im Bösen\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/5t4YdxAx3VT5srzaaUpJLD\"\n            },\n            {\n                \"name\": \"Vergissmeinnicht\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/4kZsYtJFGwdfcSATpGCO5o\"\n            },\n            {\n                \"name\": \"Flieger grüss mir die Sonne\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/4BlszmxyGIzcQtNpNNlK2P\"\n            },\n            {\n                \"name\": \"1000 Narben\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/1LZNLV1neUVoMde9Q4wIbM\"\n            },\n            {\n                \"name\": \"Nein Danke\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/2FNTwTfVOsqJsUjExUk4Qo\"\n            },\n            {\n                \"name\": \"Prototyp\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/3AADh7XgBPSSmSXv89y0dp\"\n            },\n            {\n                \"name\": \"Skandal im Sperrbezirk\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/7dhuBVKmMrWPck8JoKtsB4\"\n            },\n            {\n                \"name\": \"Himmel, Arsch und Zwirn\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/0VP1SjF6l8PBKL4jZMr7Bu\"\n            },\n            {\n                \"name\": \"Dagegen (feat. Dero Goi)\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/6wFWyOL6T7ZNKnv0eKX8sf\"\n            },\n            {\n                \"name\": \"Automat\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/3DqkurzfEH1VK4emHih94z\"\n            },\n            {\n                \"name\": \"Goldener Reiter\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/61HLXJkQI0v7Y2vCK7OgdZ\"\n            },\n            {\n                \"name\": \"So oder so\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/26A3yPvxkQde6LXkLWAT6Y\"\n            },\n            {\n                \"name\": \"Kontrollverlust\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/6Kjq0RVokgV3sArlGKwipW\"\n            },\n            {\n                \"name\": \"Leider\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/1o0WQOlSUZTcjBTC9TgNU5\"\n            },\n            {\n                \"name\": \"Bitte Bitte\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/5wOlITwLYkmzkQ1qhVFUbi\"\n            },\n            {\n                \"name\": \"Böse Mädchen\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/6Md8bR6nDdwr1cr7kmljCs\"\n            },\n            {\n                \"name\": \"Liebe Macht Monstour\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/4aX2XAG3G6QNY6MD7pNAlx\"\n            },\n            {\n                \"name\": \"Ohne Dich\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/3SZs3rrqwtma64OJVinAMJ\"\n            },\n            {\n                \"name\": \"Die Hölle muss warten\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/7vsWJ2bjtryAgt7PTR6TNZ\"\n            },\n            {\n                \"name\": \"Eisbär\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/72AlJkZWUnFlzRq4UbxIXb\"\n            },\n            {\n                \"name\": \"Schwarze Witwe\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/5FZUP3sMK2GtoPeXWj3dws\"\n            },\n            {\n                \"name\": \"Eins, Zwei, Polizei\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/6Xh8utlpcxUGdnXWBWtUNM\"\n            },\n            {\n                \"name\": \"Stossgebet\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/1Qj9hZyPLtGpM03E1aLCNR\"\n            },\n            {\n                \"name\": \"In einem Boot\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/1gpszLJVXYm8AcW9qbSrxt\"\n            },\n            {\n                \"name\": \"Tanz mit mir\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/0WfitvCK0a0O0nGErmcHbN\"\n            },\n            {\n                \"name\": \"Supermodel\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/0vtK9ITw9XB1TEjMwJHXhy\"\n            },\n            {\n                \"name\": \"Wenn Zeit die Wunden heilt\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/6sZ43eOA5wxoTHR3AjrVUY\"\n            },\n            {\n                \"name\": \"Heilig\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/72mMFZWjML2m7gp1K6zQXO\"\n            },\n            {\n                \"name\": \"Kein Mitleid\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/44gCqlB0ge292hDZj0qHkN\"\n            },\n            {\n                \"name\": \"Die Engel\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/0iixpXnzgVJGzwdv1ObBH6\"\n            },\n            {\n                \"name\": \"Keine Liebe\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/04pqHi2WcEuXTpn76xwv1N\"\n            },\n            {\n                \"name\": \"Herzdieb\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/2mEyl4rcdKJWxjcKY0yfYa\"\n            },\n            {\n                \"name\": \"Angst?\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/4HPc7KXAuzxv2FaZ47rC7Y\"\n            },\n            {\n                \"name\": \"Amok\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/4alEFELoNMGNKyL4FG936L\"\n            },\n            {\n                \"name\": \"Exzess Express\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/5DexZIcr7cUPesnC6rEZnO\"\n            },\n            {\n                \"name\": \"Adrenalin\",\n                \"artist\": \"Eisbrecher\",\n                \"url\": \"https://open.spotify.com/track/7EKbA22YomJe0BQ6eLmZpO\"\n            }\n        ]\n    }\n}"
+				},
+				{
+					"name": "BEER TYPE NOT FOUND",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}/api/beer-types/best-by-temperature?temperature=20",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"beer-types",
+								"best-by-temperature"
+							],
+							"query": [
+								{
+									"key": "temperature",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "177"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b1-kqkCk6TikS0lCGwd4IZUgWAgpyU\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 Apr 2023 21:31:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"Tipo de cerveja não encontrado.\",\n    \"path\": \"/api/beer-types/best-by-temperature?temperature=20\",\n    \"method\": \"GET\",\n    \"timestamp\": \"2023-04-05T21:31:56.085Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GET BEER TYPE BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}/api/beer-types/2",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"beer-types",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "NOT FOUND",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}/api/beer-types/1",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"beer-types",
+								"1"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "144"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"90-kzEZZ84tmpmCSrRfrQpsJqpU8ZI\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 Apr 2023 21:33:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"Tipo de cerveja não encontrado.\",\n    \"path\": \"/api/beer-types/1\",\n    \"method\": \"GET\",\n    \"timestamp\": \"2023-04-05T21:33:03.830Z\"\n}"
+				},
+				{
+					"name": "SUCCESS",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}/api/beer-types/2",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"beer-types",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "166"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a6-8Fze1D5wmXg7sBS/+O0MdaX2fD0\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 Apr 2023 21:33:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"type\": \"Weissbier\",\n    \"min_temperature\": -1,\n    \"max_temperature\": 3,\n    \"created_at\": \"2023-04-05T00:00:00.000Z\",\n    \"updated_at\": \"2023-04-05T00:00:00.000Z\",\n    \"deleted_at\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "GET ALL BEER TYPES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}/api/beer-types",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"beer-types"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SUCCESS",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}/api/beer-types",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"beer-types"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "351"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"15f-ZseNefMgGQLCNMKbb8lqh5ZycIM\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 Apr 2023 21:34:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 2,\n            \"type\": \"Weissbier\",\n            \"min_temperature\": -1,\n            \"max_temperature\": 3,\n            \"created_at\": \"2023-04-05T00:00:00.000Z\",\n            \"updated_at\": \"2023-04-05T00:00:00.000Z\",\n            \"deleted_at\": null\n        },\n        {\n            \"id\": 3,\n            \"type\": \"Dunkel\",\n            \"min_temperature\": -8,\n            \"max_temperature\": 2,\n            \"created_at\": \"2023-04-05T00:00:00.000Z\",\n            \"updated_at\": \"2023-04-05T00:00:00.000Z\",\n            \"deleted_at\": null\n        }\n    ],\n    \"count\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "CREATE BEER TYPE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type\": \"Pilsens\",\n    \"min_temperature\": -2,\n    \"max_temperature\": 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/api/beer-types",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"beer-types"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ERROR - FIELDS SHOUT NOT BE EMPTY",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"Pilsens\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}/api/beer-types",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"beer-types"
+							]
+						}
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "425"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a9-YbhAAJxPVhepLAK9Z8243r6EyrQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 Apr 2023 21:40:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 422,\n    \"message\": \"Unprocessable Entity\",\n    \"path\": \"/api/beer-types\",\n    \"method\": \"POST\",\n    \"timestamp\": \"2023-04-05T21:40:19.979Z\",\n    \"validation\": [\n        \"min_temperature must be a number conforming to the specified constraints\",\n        \"min_temperature should not be empty\",\n        \"A temperatura máxima deve ser maior que a mínima\",\n        \"max_temperature must be a number conforming to the specified constraints\",\n        \"max_temperature should not be empty\"\n    ]\n}"
+				},
+				{
+					"name": "ERROR - MAX TEMPERATURE SHOULD BE BIGGER THAN MIN TEMPERATURE",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"Pilsens\",\n    \"min_temperature\": 5,\n    \"max_temperature\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}/api/beer-types",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"beer-types"
+							]
+						}
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "199"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c7-n1SCR/X1rl2HL8ok9IbzhgtyVaA\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 Apr 2023 21:42:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 422,\n    \"message\": \"Unprocessable Entity\",\n    \"path\": \"/api/beer-types\",\n    \"method\": \"POST\",\n    \"timestamp\": \"2023-04-05T21:42:08.613Z\",\n    \"validation\": [\n        \"A temperatura máxima deve ser maior que a mínima\"\n    ]\n}"
+				},
+				{
+					"name": "SUCCESS",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"Pilsens\",\n    \"min_temperature\": -2,\n    \"max_temperature\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}/api/beer-types",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"beer-types"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "164"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a4-CU6HoZxPHNSCGA6yNVv8DdjoT5c\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 Apr 2023 21:42:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"type\": \"Pilsens\",\n    \"min_temperature\": -2,\n    \"max_temperature\": 4,\n    \"deleted_at\": null,\n    \"id\": 4,\n    \"created_at\": \"2023-04-05T21:42:53.000Z\",\n    \"updated_at\": \"2023-04-05T21:42:53.000Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "UPDATE BEER TYPE",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 4,\n    \"type\": \"Pilsens ALTERADO\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/api/beer-types",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"beer-types"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ERROR - ID MUST BE A NUMBER",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"5\",\n    \"type\": \"Pilsens\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}/api/beer-types",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"beer-types"
+							]
+						}
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "209"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d1-xFpX3vinnyraCZVQJ9BWc6CLotw\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 Apr 2023 21:44:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 422,\n    \"message\": \"Unprocessable Entity\",\n    \"path\": \"/api/beer-types\",\n    \"method\": \"PATCH\",\n    \"timestamp\": \"2023-04-05T21:44:51.787Z\",\n    \"validation\": [\n        \"id must be a number conforming to the specified constraints\"\n    ]\n}"
+				},
+				{
+					"name": "ERROR - BEER TYPE NOT FOUND WITH THIS ID",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 5,\n    \"type\": \"Pilsens\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}/api/beer-types",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"beer-types"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "144"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"90-GusVUOF1qoGYRWCBazXFfdqKAdE\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 Apr 2023 21:45:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"Tipo de cerveja não encontrado.\",\n    \"path\": \"/api/beer-types\",\n    \"method\": \"PATCH\",\n    \"timestamp\": \"2023-04-05T21:45:16.664Z\"\n}"
+				},
+				{
+					"name": "SUCCESS",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 4,\n    \"type\": \"Pilsens ALTERADO\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}/api/beer-types",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"beer-types"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "173"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ad-FhAKR8ubzNAc/rjxYhNwKz+ZPKE\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 Apr 2023 21:45:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4,\n    \"type\": \"Pilsens ALTERADO\",\n    \"min_temperature\": -2,\n    \"max_temperature\": 4,\n    \"created_at\": \"2023-04-05T21:42:53.000Z\",\n    \"updated_at\": \"2023-04-05T21:45:49.000Z\",\n    \"deleted_at\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "DELETE BEER TYPE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 4,\n    \"type\": \"Pilsens ALTERADO\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/api/beer-types/4",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"beer-types",
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ERROR - BEER TYPE NOT FOUND WITH THIS ID",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 4,\n    \"type\": \"Pilsens ALTERADO\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}/api/beer-types/1",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"beer-types",
+								"1"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "147"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"93-dyUG8lH+ILwY+91c8+LE7lysEj0\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 Apr 2023 21:47:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"Tipo de cerveja não encontrado.\",\n    \"path\": \"/api/beer-types/1\",\n    \"method\": \"DELETE\",\n    \"timestamp\": \"2023-04-05T21:47:02.786Z\"\n}"
+				},
+				{
+					"name": "SUCCESS",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 4,\n    \"type\": \"Pilsens ALTERADO\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}/api/beer-types/4",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"beer-types",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10-sVfJQj54VHOAwj+hmq8RTMGcte8\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 Apr 2023 21:47:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"deleted\": true\n}"
+				}
+			]
+		}
+	]
+}
