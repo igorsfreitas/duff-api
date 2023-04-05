@@ -19,6 +19,13 @@ export class BeerTypesService {
     return this.beerTypeRepository.findById(id);
   }
 
+  findBestByTemperature(temperature: number) {
+    const bestByTemperature =
+      this.beerTypeRepository.findBestByTemperature(temperature);
+
+    return bestByTemperature;
+  }
+
   update(updateBeerTypeDto: UpdateBeerTypeDto) {
     return this.beerTypeRepository.update(updateBeerTypeDto);
   }

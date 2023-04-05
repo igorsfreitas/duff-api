@@ -50,4 +50,27 @@ export class BeerTypeRepository {
     });
     return { deleted: !!result.affected };
   }
+
+  async findBestByTemperature(temperature: number): Promise<BeerType> {
+    const beerType = await this.beerTypeRepository
+      .createQueryBuilder('bt')
+      .select('bt.type as type')
+      .addSelect(
+        `
+        (
+          CASE 
+            WHEN ((bt.max_temperature + bt.min_temperature)/2) = 0 THEN (${temperature}*-1)
+            WHEN ((bt.max_temperature + bt.min_temperature)/2) != 0 THEN (${temperature} + ((bt.max_temperature + bt.min_temperature)/2))
+          END
+        ) as diferenca
+      `,
+      )
+      .where(`${temperature} BETWEEN bt.min_temperature and bt.max_temperature`)
+      .orderBy('2 ASC, type')
+      .getRawOne();
+
+    if (!beerType) throw new NotFoundException(errorMessages.beerType.notFound);
+
+    return beerType;
+  }
 }

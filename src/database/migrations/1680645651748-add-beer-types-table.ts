@@ -3,18 +3,16 @@ import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 const table_name = 'beer_types';
 export class addBeerTypesTable1680645651748 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.query('CREATE EXTENSION IF NOT EXISTS "uuid-ossp"');
     await queryRunner.createTable(
       new Table({
         name: table_name,
         columns: [
           {
             name: 'id',
-            type: 'uuid',
+            type: 'integer',
             isPrimary: true,
             isGenerated: true,
-            generationStrategy: 'uuid',
-            default: 'uuid_generate_v4()',
+            generationStrategy: 'increment',
           },
           {
             name: 'type',
@@ -34,12 +32,12 @@ export class addBeerTypesTable1680645651748 implements MigrationInterface {
           {
             name: 'created_at',
             type: 'timestamp',
-            default: 'now()',
+            default: "date('now')",
           },
           {
             name: 'updated_at',
             type: 'timestamp',
-            default: 'now()',
+            default: "date('now')",
           },
           {
             name: 'deleted_at',

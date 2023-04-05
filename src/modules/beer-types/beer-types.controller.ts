@@ -6,6 +6,7 @@ import {
   Patch,
   Param,
   Delete,
+  Query,
 } from '@nestjs/common';
 import { BeerTypesService } from './beer-types.service';
 import { CreateBeerTypeDto } from './dto/create-beer-type.dto';
@@ -18,6 +19,11 @@ export class BeerTypesController {
   @Post()
   create(@Body() createBeerTypeDto: CreateBeerTypeDto) {
     return this.beerTypesService.create(createBeerTypeDto);
+  }
+
+  @Get('best-by-temperature')
+  getBestBeerTypeByTemperature(@Query('temperature') temperature: number) {
+    return this.beerTypesService.findBestByTemperature(temperature);
   }
 
   @Get()
