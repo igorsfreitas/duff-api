@@ -3,12 +3,18 @@ import { AppModule } from './app.module';
 import * as dot from 'dotenv';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { HttpExceptionFilter } from './commons/filters/http-exception.filter';
+import { HttpStatus, ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   dot.config();
 
   const app = await NestFactory.create(AppModule);
   app.useGlobalFilters(new HttpExceptionFilter());
+  app.useGlobalPipes(
+    new ValidationPipe({
+      errorHttpStatusCode: HttpStatus.UNPROCESSABLE_ENTITY,
+    }),
+  );
   app.setGlobalPrefix('api');
 
   const config = new DocumentBuilder()
@@ -19,7 +25,7 @@ async function bootstrap() {
     .addTag('duff')
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('docs', app, document);
 
   await app.listen(process.env.PORT ?? 3333);
 
