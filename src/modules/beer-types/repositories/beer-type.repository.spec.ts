@@ -14,6 +14,7 @@ import { UpdateBeerTypeDto } from '../dto/update-beer-type.dto';
 describe('BeerTypeRepository', () => {
   let repository: BeerTypeRepository;
   let entityRepository: MockRepository<BeerType>;
+  let btRepository: MockRepository<BeerType>;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
@@ -28,6 +29,9 @@ describe('BeerTypeRepository', () => {
 
     repository = module.get<BeerTypeRepository>(BeerTypeRepository);
     entityRepository = module.get<MockRepository<BeerType>>(
+      getRepositoryToken(BeerType),
+    );
+    btRepository = module.get<MockRepository<BeerType>>(
       getRepositoryToken(BeerType),
     );
   });
@@ -116,6 +120,40 @@ describe('BeerTypeRepository', () => {
     expect(repository.findById).toBeCalledTimes(1);
     expect(repository.findById).toBeCalledWith(id);
     expect(entityRepository.findOne).toBeCalledWith({ where: { id } });
+  });
+
+  it('should throw error if not playlist found find best beer type by temperature', async () => {
+    //Arrange
+    const temperature = 2;
+    jest.spyOn(btRepository, 'createQueryBuilder').mockRejectedValue(undefined);
+    jest
+      .spyOn(repository, 'findBestByTemperature')
+      .mockRejectedValue(
+        new NotFoundException(errorMessages.beerType.notFound),
+      );
+
+    // act
+    await expect(repository.findBestByTemperature(temperature)).rejects.toThrow(
+      new NotFoundException(errorMessages.beerType.notFound),
+    );
+
+    // assert
+    expect(repository.findBestByTemperature).toBeCalledTimes(1);
+    expect(repository.findBestByTemperature).toBeCalledWith(temperature);
+  });
+
+  it('should find better beer type by temperature', async () => {
+    //Arrange
+    const temperature = 2;
+    jest.spyOn(btRepository, 'createQueryBuilder');
+    jest.spyOn(repository, 'findBestByTemperature');
+
+    // act
+    await repository.findBestByTemperature(temperature);
+
+    // assert
+    expect(repository.findBestByTemperature).toBeCalledTimes(1);
+    expect(btRepository.createQueryBuilder).toBeCalled();
   });
 
   it('should throw error when does not find beer type by id', async () => {

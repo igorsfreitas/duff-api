@@ -14,6 +14,7 @@ export const repositoryMockFactory = () => ({
     from: jest.fn().mockReturnThis(),
     innerJoin: jest.fn().mockReturnThis(),
     select: jest.fn().mockReturnThis(),
+    addSelect: jest.fn().mockReturnThis(),
     where: jest.fn().mockReturnThis(),
     andWhere: jest.fn().mockReturnThis(),
     orWhere: jest.fn().mockReturnThis(),
@@ -31,6 +32,7 @@ export const repositoryMockFactory = () => ({
     getManyAndCount: jest.fn().mockResolvedValue([[], 0]),
     getMany: jest.fn().mockResolvedValue([]),
     getOne: jest.fn().mockResolvedValue({}),
+    getRawOne: jest.fn().mockResolvedValue({}),
   })),
 });
 

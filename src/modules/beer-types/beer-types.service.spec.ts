@@ -9,9 +9,14 @@ import { BeerTypeRepository } from './repositories/beer-type.repository';
 import { BeerType } from './entities/beer-type.entity';
 import { CreateBeerTypeDto } from './dto/create-beer-type.dto';
 import { UpdateBeerTypeDto } from './dto/update-beer-type.dto';
+import { PlaylistService } from '../playlists/playlist.service';
+import { NotFoundException } from '@nestjs/common';
+import { errorMessages } from '@commons/constants/errors';
 
+jest.mock('../playlists/playlist.service');
 describe('BeerTypesService', () => {
   let service: BeerTypesService;
+  let playlistService: PlaylistService;
   let repository: BeerTypeRepository;
   let entityRepository: MockRepository<BeerType>;
 
@@ -20,6 +25,7 @@ describe('BeerTypesService', () => {
       providers: [
         BeerTypesService,
         BeerTypeRepository,
+        PlaylistService,
         {
           provide: getRepositoryToken(BeerType),
           useValue: repositoryMockFactory(),
@@ -28,6 +34,7 @@ describe('BeerTypesService', () => {
     }).compile();
 
     service = module.get<BeerTypesService>(BeerTypesService);
+    playlistService = module.get<PlaylistService>(PlaylistService);
     repository = module.get<BeerTypeRepository>(BeerTypeRepository);
     entityRepository = module.get<MockRepository<BeerType>>(
       getRepositoryToken(BeerType),
@@ -94,6 +101,50 @@ describe('BeerTypesService', () => {
     expect(repository.findById).toBeCalledTimes(1);
     expect(repository.findById).toBeCalledWith(id);
     expect(service.findOne).toBeCalledWith(id);
+  });
+
+  it('should throw error if not playlist found find best beer type by temperature', async () => {
+    //Arrange
+    const temperature = 2;
+    jest
+      .spyOn(repository, 'findBestByTemperature')
+      .mockResolvedValue(new BeerType());
+    jest.spyOn(service, 'findBestByTemperature');
+
+    // act
+    await expect(service.findBestByTemperature(temperature)).rejects.toThrow(
+      new NotFoundException(errorMessages.beerType.notFound),
+    );
+
+    // assert
+    expect(repository.findBestByTemperature).toBeCalledTimes(1);
+    expect(repository.findBestByTemperature).toBeCalledWith(temperature);
+  });
+  it('should find best beer type by temperature', async () => {
+    //Arrange
+    const temperature = 2;
+    jest
+      .spyOn(repository, 'findBestByTemperature')
+      .mockResolvedValue(new BeerType());
+    jest.spyOn(service, 'findBestByTemperature');
+    jest.spyOn(playlistService, 'findPlaylistByName').mockResolvedValue({
+      name: 'This Is [dunkelbunt]',
+      tracks: [
+        {
+          name: 'Cinnamon Girl - Radio Edit',
+          artist: '[dunkelbunt]',
+          url: 'https://open.spotify.com/track/53GzKd394URyonJR4CPzyC',
+        },
+      ],
+    });
+
+    // act
+    await service.findBestByTemperature(temperature);
+
+    // assert
+    expect(repository.findBestByTemperature).toBeCalledTimes(1);
+    expect(repository.findBestByTemperature).toBeCalledWith(temperature);
+    expect(service.findBestByTemperature).toBeCalledWith(temperature);
   });
 
   it('should update a beer type', async () => {
