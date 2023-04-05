@@ -1,11 +1,16 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateBeerTypeDto } from './dto/create-beer-type.dto';
 import { UpdateBeerTypeDto } from './dto/update-beer-type.dto';
 import { BeerTypeRepository } from './repositories/beer-type.repository';
+import { PlaylistService } from '@modules/playlists/playlist.service';
+import { errorMessages } from '@commons/constants/errors';
 
 @Injectable()
 export class BeerTypesService {
-  constructor(private readonly beerTypeRepository: BeerTypeRepository) {}
+  constructor(
+    private readonly beerTypeRepository: BeerTypeRepository,
+    private readonly playlistService: PlaylistService,
+  ) {}
 
   async create(createBeerTypeDto: CreateBeerTypeDto) {
     return await this.beerTypeRepository.create(createBeerTypeDto);
@@ -19,11 +24,20 @@ export class BeerTypesService {
     return this.beerTypeRepository.findById(id);
   }
 
-  findBestByTemperature(temperature: number) {
+  async findBestByTemperature(temperature: number) {
     const bestByTemperature =
-      this.beerTypeRepository.findBestByTemperature(temperature);
+      await this.beerTypeRepository.findBestByTemperature(temperature);
 
-    return bestByTemperature;
+    const playlist = await this.playlistService.findPlaylistByName({
+      name: bestByTemperature.type,
+    });
+
+    if (!playlist) throw new NotFoundException(errorMessages.beerType.notFound);
+
+    return {
+      beerStyle: bestByTemperature.type,
+      playlist,
+    };
   }
 
   update(updateBeerTypeDto: UpdateBeerTypeDto) {
