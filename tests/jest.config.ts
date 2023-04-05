@@ -9,8 +9,11 @@ const config: Config.InitialOptions = {
   },
   testEnvironment: 'node',
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
     '^@tests/(.*)$': '<rootDir>/tests/$1',
+    '^@config/(.*)$': '<rootDir>/src/config/$1',
+    '^@database/(.*)$': '<rootDir>/src/database/$1',
+    '^@modules/(.*)$': '<rootDir>/src/modules/$1',
+    '^@commons/(.*)$': '<rootDir>/src/commons/$1',
   },
   modulePathIgnorePatterns: [
     '<rootDir>/dist/',
@@ -22,8 +25,9 @@ const config: Config.InitialOptions = {
   ],
   coverageDirectory: './coverage',
   collectCoverageFrom: [
-    '**/*.{!(*@(dto|guard|entity|module|strategy|decorator)),}.ts',
+    '**/*.{!(*@(dto|guard|entity|module|strategy|decorator|filter|validator)),}.ts',
   ],
+  coveragePathIgnorePatterns: ['<rootDir>/tests/mocks/repository.mock.ts'],
 };
 
 export default config;
