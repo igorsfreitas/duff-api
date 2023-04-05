@@ -9,6 +9,12 @@ export const errorMessages = {
       message: 'Internal server error',
     },
   },
+  beerType: {
+    notFound: {
+      code: 'BEER_TYPE_ERR_01',
+      message: 'Tipo de cerveja não encontrado.',
+    },
+  },
 };
 
 const errorsCode = {
